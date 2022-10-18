@@ -1,3 +1,4 @@
+import 'package:codigo2_components_2/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
 
 class FormAlert4Widget extends StatefulWidget {
@@ -8,6 +9,26 @@ class FormAlert4Widget extends StatefulWidget {
 }
 
 class _FormAlert4WidgetState extends State<FormAlert4Widget> {
+  List<Map<String, dynamic>> tarjetas = [
+    {
+      "image": "assets/images/visa.png",
+      "name": "Visa",
+      "width": 25.0,
+      "height": 20.0,
+    },
+    {
+      "image": "assets/images/mastercard.png",
+      "name": "Mastercard",
+      "width": 25.0,
+      "height": 20.0,
+    },
+    {
+      "image": "assets/images/applePay.png",
+      "name": "Visa",
+      "width": 30.0,
+      "height": 30.0,
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -48,232 +69,18 @@ class _FormAlert4WidgetState extends State<FormAlert4Widget> {
           SizedBox(
             height: 10.0,
           ),
-          //Card 1
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 8.0),
-            padding: const EdgeInsets.all(8.0),
-            decoration: BoxDecoration(
-              color: Color(0xffCF9CFF).withOpacity(0.2),
-              borderRadius: BorderRadius.circular(24.0),
-            ),
-            child: Row(
-              children: [
-                Image.asset("assets/images/visa.png"),
-                const SizedBox(
-                  width: 6.0,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Visa ending in 1234",
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff7E56DA).withOpacity(1),
-                        ),
-                      ),
-                      Text(
-                        "Expiry 06/2024",
-                        style: TextStyle(
-                          fontSize: 10.0,
-                          color: Color(0xffCF9CFF),
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "Set as default",
-                            style: TextStyle(
-                              fontSize: 10.0,
-                              color: Color(0xffCF9CFF),
-                              fontWeight: FontWeight.w900,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text(
-                            "Edit",
-                            style: TextStyle(
-                              fontSize: 10.0,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xff7E56DA).withOpacity(1),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Checkbox(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  activeColor: Colors.purple.shade200,
-                  value: false,
-                  onChanged: (value) {},
-                ),
-              ],
-            ),
-          ),
-          //Card 2
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 8.0),
-            padding: const EdgeInsets.all(8.0),
-            decoration: BoxDecoration(
-              color: Color(0xffCF9CFF).withOpacity(0.2),
-              borderRadius: BorderRadius.circular(24.0),
-            ),
-            child: Row(
-              children: [
-                Image.asset(
-                  "assets/images/mastercard.png",
-                  width: 25.0,
-                  height: 20.0,
-                ),
-                const SizedBox(
-                  width: 6.0,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Visa ending in 1234",
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff7E56DA).withOpacity(1),
-                        ),
-                      ),
-                      Text(
-                        "Expiry 06/2024",
-                        style: TextStyle(
-                          fontSize: 10.0,
-                          color: Color(0xffCF9CFF),
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "Set as default",
-                            style: TextStyle(
-                              fontSize: 10.0,
-                              color: Color(0xffCF9CFF),
-                              fontWeight: FontWeight.w900,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text(
-                            "Edit",
-                            style: TextStyle(
-                              fontSize: 10.0,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xff7E56DA).withOpacity(1),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Checkbox(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  activeColor: Colors.purple.shade200,
-                  value: false,
-                  onChanged: (value) {},
-                ),
-              ],
-            ),
-          ),
-          //Card 3
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 8.0),
-            padding: const EdgeInsets.all(8.0),
-            decoration: BoxDecoration(
-              color: Color(0xffCF9CFF).withOpacity(0.2),
-              borderRadius: BorderRadius.circular(24.0),
-            ),
-            child: Row(
-              children: [
-                Image.asset(
-                  "assets/images/applePlay.png",
-                  width: 30.0,
-                  height: 30.0,
-                ),
-                const SizedBox(
-                  width: 6.0,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Visa ending in 1234",
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff7E56DA).withOpacity(1),
-                        ),
-                      ),
-                      Text(
-                        "Expiry 06/2024",
-                        style: TextStyle(
-                          fontSize: 10.0,
-                          color: Color(0xffCF9CFF),
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "Set as default",
-                            style: TextStyle(
-                              fontSize: 10.0,
-                              color: Color(0xffCF9CFF),
-                              fontWeight: FontWeight.w900,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text(
-                            "Edit",
-                            style: TextStyle(
-                              fontSize: 10.0,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xff7E56DA).withOpacity(1),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Checkbox(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  activeColor: Colors.purple.shade200,
-                  value: false,
-                  onChanged: (value) {},
-                ),
-              ],
-            ),
+          //Cards
+          ...List.generate(
+            3,
+            (index) => CardWidget(data: tarjetas[index],),
           ),
           Row(
             children: [
               Expanded(
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                   style: OutlinedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -293,7 +100,9 @@ class _FormAlert4WidgetState extends State<FormAlert4Widget> {
               ),
               Expanded(
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xff7E56DA),
                     shape: RoundedRectangleBorder(
